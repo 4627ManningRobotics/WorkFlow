@@ -8,7 +8,7 @@ tool=vimdiff
 [alias]
 	stat = status
 	remotes = remote -v
-	branches = branch -v
+	branches = branch -avv
 	co = checkout
 	ci = commit
 	stat = status
@@ -20,9 +20,7 @@ tool=vimdiff
 	glog = log --graph --all --oneline --decorate
 	hist = log --pretty=format:'%C(yellow)%h %C(white)%ad | %C(normal)%s%d %C(normal)[%an]' --graph --date=short
 	last = log --name-status -n1
-	branches = branch -avv
 	tags = tag -l
-	remotes = remote -v
 	currentbranch = rev-parse --abbrev-ref HEAD
 	addremove = !git add . && git add -u
 	sl = "!sh -c 'git show --color=always $1 | less -R' -"
