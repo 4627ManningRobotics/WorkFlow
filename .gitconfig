@@ -1,0 +1,50 @@
+[user]
+	name = Alice Coderator
+	email = alice@example.com
+
+[merge]
+tool=vimdiff
+
+[alias]
+	stat = status
+	remotes = remote -v
+	branches = branch -v
+	co = checkout
+	ci = commit
+	stat = status
+	st = status
+	br = branch
+	cdiff = diff --cached
+	gdiff = -c diff.external=git_diff_wrapper -c pager.diff=false diff
+	ggdiff = -c diff.external='git_diff_wrapper -g' -c pager.diff=false diff
+	glog = log --graph --all --oneline --decorate
+	hist = log --pretty=format:'%C(yellow)%h %C(white)%ad | %C(normal)%s%d %C(normal)[%an]' --graph --date=short
+	last = log --name-status -n1
+	branches = branch -avv
+	tags = tag -l
+	remotes = remote -v
+	currentbranch = rev-parse --abbrev-ref HEAD
+	addremove = !git add . && git add -u
+	sl = "!sh -c 'git show --color=always $1 | less -R' -"
+	rollback = reset --soft HEAD~1
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format: %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	pic = "!git graphviz | dot -Tpng -o - | qiv -"
+	agrep = "!git rev-list --all | xargs git grep"
+
+[color]
+	ui = auto
+
+#
+# save conflict resolution to repo.
+#
+[rerere]
+	enabled = true
+
+[push]
+	default = simple
+
+# 
+# Rebase local commits on top of pulled in ones.
+#
+[branch]
+	autosetuprebase = always
