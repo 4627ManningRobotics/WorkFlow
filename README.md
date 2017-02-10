@@ -107,4 +107,41 @@ You think your new feature is ready for testing.  The drive-team can check it ou
 The drive team has tested your new feature.  It works awesome and didn't break anything!  First you have to pull in any changes someone else may have committed to master while you were off working on your branch:
 
 	$ git pull
-	$ git merge 
+	$ git checkout master
+	$ git merge my_awesome_mod
+	Updating 9b5050d..4362834
+	Fast-forward
+	README.md | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------------------------
+	1 file changed, 58 insertions(+), 26 deletions(-)
+	
+Now what you've done is made sure the remote hadn't progressed beyond where you were or if it had, you pulled in any changes that weren't there.  Then you switched to the master branch and pulled changes from your development branch into master.  Now you've merged locally, but the remote doesn't have those changes so you have to push them:
+
+	$ git status
+	On branch master
+	Your branch is ahead of 'origin/master' by 2 commits.
+	(use "git push" to publish your local commits)
+	nothing to commit, working directory clean
+	
+	$ git push
+	Total 0 (delta 0), reused 0 (delta 0)
+	To https://github.com/4627ManningRobotics/WorkFlow
+	9b5050d..4362834  master -> master
+
+If you have more work to do on your branch, you can switch back to it:
+
+	$ git checkout my_awesome_mod
+	
+and keep working.
+
+### Links
+
+The above is just a rough work-flow.  Git has many many options and lots of flexibility as well as a bunch of corner cases.  When you discover a corner case and figure out how to fix it or work around it, you should modify this document and add it to the "FAQ" section below.  Here are some links to help you:
+
+* <https://git-scm.com/docs>
+
+### FAQ
+
+* I just did a hack locally but I'm not sure that I'm happy with it.  How do I set it aside because I don't really want to lose it but I probably don't need it.
+	* You can always make a branch from a branch and commit it there.  So if you're in my__awesome_mod, then you can "git checkout -b quick_hack" and add/commit the changes there. 
+	* But I find it easiest to "git stash" and then "git stash pop" to retrieve the changes later.
+
