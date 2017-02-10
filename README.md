@@ -22,6 +22,7 @@ Git is a distributed source code management system. This means that the reposito
 
 Once you've got access to the group, you can do a number of things.  You can clone an existing repository, or you can create your own and push it to github.  Lets start by creating your own repository.
 
+Make sure you edit the ".gitconfig" file in this repository by putting your name and email address.  The name in this file is what will appear when people do "git log" so it should be descriptive and unambiguous.
 
 ### Create a new repository
 
@@ -89,6 +90,10 @@ Once you're happy with the output of *git status*, you can:
 If you're finished committing and want to sync the changes with the remote repository, you can then:
 
 	$ git push
+	
+If this branch doesn't already exist at the remote repository, you have to tell it that what you have is a new local branch that you also want to exist at the remote.  You do that like so:
+
+	$ git push --set-upstream origin my_awesome_mod
 	
 ### Someone else can test your changes
 
