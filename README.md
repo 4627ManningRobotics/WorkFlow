@@ -4,21 +4,17 @@
 
 To get started with Git in the 4627 Manning Robotics environment, you first need to install git and some other stuff:
 
-* Windows:
- * Install "git for windows" from <https://git-for-windows.github.io/>
-        *Ryan/Drew: is this a good windows tool?*
-
+* Windows/Mac:
+ * Install [The github desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/)
+      
 * Linux Debian/Ubuntu:
         
         apt install git
 
-* OS X:
-        <https://git-scm.com/download/mac>
-
 
 The rest of this document assumes that you are using the command line interface.  At the present time, the coders on the team are all *eleeet haxx0rs* and are comfortable on the command line.  If you need command line help, please ask a previous team coder or a mentor.  Or fumble around in the gui and update this document accordingly.
 
-Git is a distributed source code management system. This means that the repository is stored at a remote site like github.com or gitlab.com  (we use github.com).  You need to ask a mentor or teacher to give you access to the ManningRobotics group at www.github.com.  In order for them to do so, you should create an account on github.com first.
+Git is a distributed source code management system. This means that the repository is stored at a remote site like github.com or gitlab.com  (we use github.com).  You need to ask a mentor or teacher to give you access to the 4627ManningRobotics group at www.github.com.  In order for them to do so, you should create an account on github.com first.
 
 Once you've got access to the group, you can do a number of things.  You can clone an existing repository, or you can create your own and push it to github.  Lets start by creating your own repository.
 
