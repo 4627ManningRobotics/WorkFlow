@@ -4,8 +4,12 @@
 
 To get started with Git in the 4627 Manning Robotics environment, you first need to install git and some other stuff:
 
-* Windows/Mac:
- * Install [The github desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/)
+* Windows:
+** Install [The github desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/)
+** Install [Git Bash](https://gitforwindows.org/)
+
+* Mac
+** Install [The github desktop](https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/)
       
 * Linux Debian/Ubuntu:
         
